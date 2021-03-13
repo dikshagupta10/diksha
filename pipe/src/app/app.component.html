@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Insert title here</title>
+</head>
+
+<body>
+
+  <h1>Custom Pipe</h1>
+  <b>Square root of 25 is: {{25 | search}}</b>
+  <br/>
+  <b>Square root of 729 is: {{729 | search}}</b>
+
+
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>SALARY</th>
+      <th>DEPARTMENT</th>
+      <th>DOJ</th>
+    </tr>
+    <tr *ngFor="let emp of employess">
+      <td>{{emp.empId}}</td>
+      <td>{{emp.empName|uppercase | slice:0:4}}</td> <!-- Channing pipes & passing parameter -->
+      <td>{{emp.empSal|search}}</td> <!-- Currency pipes -->
+      <td>{{emp.empDep}}</td>
+      <td>{{emp.empjoiningdate|date:'fullDate'|uppercase}}</td> <!-- Dates pipes channing pipes -->
+
+    </tr>
+  </table>
+</body>
+
+</html>
