@@ -1,0 +1,13 @@
+<p>employee works!</p>
+<h1>-------DATA BINDING------</h1>
+<!-- one way interpolation binding-->
+<h1> Welcome {{firstname}} {{lastname}} </h1>
+<!--property binding-->
+<div>
+    <span [innerHTML]='firstname'></span>
+</div>
+<button (click)='myfunction()'>Show alert</button><br>
+<!-- two way binding-->
+Enter the value :<input [(ngModel)] ='val'>
+<br>
+Entered value is: {{val}}
